@@ -1,4 +1,4 @@
-var core = require('./core');
+var math = require("./dist/math");
 
 /**
  * math.js factory function. Creates a new instance of math.js
@@ -23,16 +23,16 @@ var core = require('./core');
  *                              returns `complex('2i')` when predictable is false, and
  *                              returns `NaN` when true.
  */
-function create (config) {
-  // create a new math.js instance
-  var math = core.create(config);
-  math.create = create;
-
-  // import data types, functions, constants, expression parser, etc.
-  math['import'](require('./lib'));
-
-  return math;
-}
+// function create (config) {
+//   // create a new math.js instance
+//   var math = core.create(config);
+//   math.create = create;
+//
+//   // import data types, functions, constants, expression parser, etc.
+//   math['import'](require('./lib'));
+//
+//   return math;
+// }
 
 // return a new instance of math.js
-module.exports = create();
+module.exports = math;
